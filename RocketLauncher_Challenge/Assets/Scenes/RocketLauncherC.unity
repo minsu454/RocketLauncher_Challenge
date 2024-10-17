@@ -298,7 +298,6 @@ GameObject:
   m_Component:
   - component: {fileID: 114676322}
   - component: {fileID: 114676326}
-  - component: {fileID: 114676325}
   - component: {fileID: 114676324}
   - component: {fileID: 114676323}
   m_Layer: 5
@@ -319,7 +318,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1030415769}
   m_Father: {fileID: 1505933860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -370,19 +370,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &114676325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114676321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae0bf5b6e1ee4dcaa932291e0f45fa2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementSlotPrefab: {fileID: 3459308681082487400, guid: ef032311e719d4d4d99295ccf53126b9, type: 3}
 --- !u!222 &114676326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -569,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b301981519c3a4bad3bf48c7a42bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CamOffset: {x: 0, y: 1.87, z: 0}
+  CamOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &125341260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1235,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023513695}
   m_CullTransparentMesh: 1
+--- !u!1 &1030415768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030415769}
+  - component: {fileID: 1030415770}
+  - component: {fileID: 1030415771}
+  - component: {fileID: 1030415772}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030415769
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030415768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 114676322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -391.4999, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1030415770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030415768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0bf5b6e1ee4dcaa932291e0f45fa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementSlotPrefab: {fileID: 1333526075375622688, guid: ef032311e719d4d4d99295ccf53126b9, type: 3}
+--- !u!114 &1030415771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030415768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1030415772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030415768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &1052644822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 0}
+  m_Content: {fileID: 1030415769}
   m_Horizontal: 1
   m_Vertical: 1
   m_MovementType: 1
@@ -1588,7 +1666,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f8295bbba2945e4282392bc49e91ef5, type: 2}
   - {fileID: 11400000, guid: 7bd693416445cd9439bc15d79e802b99, type: 2}
   - {fileID: 11400000, guid: f39d5e02428f38841abc382518af6391, type: 2}
-  achievementView: {fileID: 114676325}
+  achievementView: {fileID: 1030415770}
 --- !u!1 &1815915930
 GameObject:
   m_ObjectHideFlags: 0
