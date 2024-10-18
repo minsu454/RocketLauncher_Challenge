@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AchievementSO
   threshold: 100
   displayName: 100
-  displayDesc: "\uC6B0\uC640"
+  displayDesc: wow
   isUnlocked: 0

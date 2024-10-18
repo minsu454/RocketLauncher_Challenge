@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AchievementSO
   threshold: 400
   displayName: 400
-  displayDesc: "\uB300\uB2E8\uD574"
+  displayDesc: nice
   isUnlocked: 0

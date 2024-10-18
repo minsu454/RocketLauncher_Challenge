@@ -13,5 +13,5 @@
 
 ### 3. 로켓 궤적 변경 기능 및 경보 기능 추가하기
     * 삼각함수와 Slerp를 활용하여 A/D키를 통해 궤도가 수정되는 로직을 구현. (Clear)
-    * Vector2.Dot을 활용하여, RocketAlertSystem의 시야각 fov내부에 소행성이 포착되었는지 여부를 검사.
-    * 구현사항 2의 소행성(Aesteroid 게임오브젝트)이 포착되었다면 삼각형의 SpriteRenderer가 노란색으로 반짝거리게 애니메이션을 적용하세요(isBlinking).
+    * Vector2.Dot을 활용하여, RocketAlertSystem의 시야각 fov내부에 소행성이 포착되었는지 여부를 검사. (Clear)
+    * 구현사항 2의 소행성(Aesteroid 게임오브젝트)이 포착되었다면 삼각형의 SpriteRenderer가 노란색으로 반짝거리게 애니메이션을 적용하세요(isBlinking). (Clear)

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class AlertSystem : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class AlertSystem : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         // FOV를 라디안으로 변환하고 코사인 값을 계산
+        alertThreshold = Mathf.Cos(fov * Mathf.Deg2Rad / 2f);
     }
 
     private void Update()
@@ -25,5 +28,28 @@ public class AlertSystem : MonoBehaviour
     private void CheckAlert()
     {
         // 주변 반경의 소행성들을 확인하고 이를 감지하여 Alert를 발생시킴(isBlinking -> true)
+        RaycastHit2D[] hitArr = Physics2D.CircleCastAll(transform.position, radius, Vector2.up, 0f, LayerMask.GetMask("Aesteriod"));
+
+        bool isHit = false;
+
+        foreach (var hit in hitArr)
+        {
+            Vector2 dirTargetVec = (hit.transform.position - transform.position).normalized;
+            Vector2 seeDir = transform.up.normalized;
+
+            float cos = Vector2.Dot(dirTargetVec, seeDir);
+
+            Debug.Log(cos * Mathf.Rad2Deg);
+
+            if (cos < alertThreshold)
+            {
+                continue;
+            }
+
+            isHit = true;
+            break;
+        }
+
+        animator.SetBool(blinking, isHit);
     }
 }
