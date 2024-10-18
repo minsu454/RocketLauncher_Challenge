@@ -11,7 +11,7 @@ public class RocketMovementC : MonoBehaviour
     private float highScore = -1;
 
     public static Action<float> OnHighScoreChanged;
-    
+
     private void Awake()
     {
         _rb2d = GetComponent<Rigidbody2D>();
@@ -37,6 +37,9 @@ public class RocketMovementC : MonoBehaviour
     private void Rotate(float inputX)
     {
         // 움직임에 따라 회전을 바꿈 -> 회전을 바꾸고 그 방향으로 발사를 해야 그쪽으로 가겠죠?
-        //transform.rotation = Quaternion.Euler(0, 0, transform.position.z + inputX);
+        Vector2 vec = new Vector2(0, inputX);
+
+        float z = MathF.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -z), ROTATIONSPEED);
     }
 }

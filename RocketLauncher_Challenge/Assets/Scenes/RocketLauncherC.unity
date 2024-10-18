@@ -1663,9 +1663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievements:
-  - {fileID: 11400000, guid: 0f8295bbba2945e4282392bc49e91ef5, type: 2}
-  - {fileID: 11400000, guid: 7bd693416445cd9439bc15d79e802b99, type: 2}
-  - {fileID: 11400000, guid: f39d5e02428f38841abc382518af6391, type: 2}
+  - {fileID: 11400000, guid: f3301c792101aca43a65cdc07e8b31fa, type: 2}
+  - {fileID: 11400000, guid: 3fc1295ef5cb52a4aa714d19b8c1e5a1, type: 2}
+  - {fileID: 11400000, guid: fa19bc3d45d3f1940af3b9d96658d0f5, type: 2}
   achievementView: {fileID: 1030415770}
 --- !u!1 &1815915930
 GameObject:

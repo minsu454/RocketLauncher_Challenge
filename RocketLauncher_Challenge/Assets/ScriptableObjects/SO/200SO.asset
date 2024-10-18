@@ -11,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9f6f97662804c7993fae623f520a7ee, type: 3}
   m_Name: 200SO
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchievementSO
   threshold: 200
-  displayName: QuestName
-  displayDesc: QuestDescription
+  displayName: 200
+  displayDesc: "\uC815\uB9D0"
   isUnlocked: 0
