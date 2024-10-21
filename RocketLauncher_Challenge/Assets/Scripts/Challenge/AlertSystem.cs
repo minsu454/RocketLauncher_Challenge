@@ -39,8 +39,6 @@ public class AlertSystem : MonoBehaviour
 
             float cos = Vector2.Dot(dirTargetVec, seeDir);
 
-            Debug.Log(cos * Mathf.Rad2Deg);
-
             if (cos < alertThreshold)
             {
                 continue;

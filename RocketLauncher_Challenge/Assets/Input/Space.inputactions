@@ -1,0 +1,46 @@
+{
+    "name": "Space",
+    "maps": [
+        {
+            "name": "Challenge",
+            "id": "5d604e14-62ca-4e77-8e98-b50e12f6184a",
+            "actions": [
+                {
+                    "name": "Scace",
+                    "type": "Value",
+                    "id": "0ed9f7f3-fa46-49ba-9d29-fa3838ebf8d1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4038b8aa-b618-476a-87c6-1cb2cc035fa3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Scace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
