@@ -23,9 +23,9 @@
     *InputRebinder 클래스의 RebindSpaceToEscape 함수는 기존 spacebar 키를 입력하던 액션을 Escape키를 입력했을 때 발생 (Clear)
 
 ### 2-2 Generic Singleton
-    * Instance 프로퍼티의 get부분을 완성하세요. 이때 다양한 문제 상황에 대한 대응을 포함해야 함
-    * Singleton<T>를 상속받는 컴포넌트를 포함한 게임오브젝트는 다른 씬으로 넘어가도 파괴되지 않게 설정(누군가의 자식일 때는 이에 대한 루트 컴포넌트 전체가 해당 특성이 적용)]
-    * Singleton<T>를 상속받는 AudioManager를 처음부터 구현하세요. 간단한 bgm을 플레이 하도록 설정
+    * Instance 프로퍼티의 get부분을 완성하세요. 이때 다양한 문제 상황에 대한 대응을 포함해야 함 (Clear)
+    * Singleton<T>를 상속받는 컴포넌트를 포함한 게임오브젝트는 다른 씬으로 넘어가도 파괴되지 않게 설정(누군가의 자식일 때는 이에 대한 루트 컴포넌트 전체가 해당 특성이 적용)] (Clear)
+    * Singleton<T>를 상속받는 AudioManager를 처음부터 구현하세요. 간단한 bgm을 플레이 하도록 설정 (Clear)
 
 ### 2-3 Object Pool 끝장보기
     * 최소 50개의 오브젝트 수 보장, 부족할 경우 누적 300개까지 추가 생성, 300개가 넘어갈 경우 임시로 생성 후 반환시 파괴

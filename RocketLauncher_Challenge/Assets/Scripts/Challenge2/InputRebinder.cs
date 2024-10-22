@@ -9,23 +9,25 @@ public class InputRebinder : MonoBehaviour
     public InputActionAsset actionAsset;
     private InputAction spaceAction;
 
+    [SerializeField] private AudioClip clip;
+
     void Start()
     {
-        // [±¸Çö»çÇ× 1] actionAsset¿¡¼­ Space ¾×¼ÇÀ» Ã£°í È°¼ºÈ­ÇÕ´Ï´Ù.
+        // [êµ¬í˜„ì‚¬í•­ 1] actionAssetì—ì„œ Space ì•¡ì…˜ì„ ì°¾ê³  í™œì„±í™”í•©ë‹ˆë‹¤.
         spaceAction = actionAsset.FindActionMap("Challenge").FindAction("Scace");
         spaceAction.Enable();
 
         spaceAction.started += OnSpace;
     }
 
-    // [±¸Çö»çÇ× 2] ContextMenu ¾îÆ®¸®ºäÆ®¸¦ È°¿ëÇØ¼­ ÀÎ½ºÆåÅÍÃ¢¿¡¼­ Àû¿ëÇÒ ¼ö ÀÖµµ·Ï ÇÔ
+    // [êµ¬í˜„ì‚¬í•­ 2] ContextMenu ì–´íŠ¸ë¦¬ë·°íŠ¸ë¥¼ í™œìš©í•´ì„œ ì¸ìŠ¤í™í„°ì°½ì—ì„œ ì ìš©í•  ìˆ˜ ìˆë„ë¡ í•¨
     [ContextMenu("RebindSpaceToEscape")]
     public void RebindSpaceToEscape()
     {
         if (spaceAction == null)
             return;
 
-        // [±¸Çö»çÇ× 3] ±âÁ¸ ¹ÙÀÎµùÀ» ºñÈ°¼ºÈ­ÇÏ°í »õ Å°·Î Àç¹ÙÀÎµù
+        // [êµ¬í˜„ì‚¬í•­ 3] ê¸°ì¡´ ë°”ì¸ë”©ì„ ë¹„í™œì„±í™”í•˜ê³  ìƒˆ í‚¤ë¡œ ì¬ë°”ì¸ë”©
         actionAsset.FindActionMap("Challenge").ChangeBinding(0).WithPath("<Keyboard>/escape");
 
         Debug.Log("Done!");
@@ -33,12 +35,12 @@ public class InputRebinder : MonoBehaviour
 
     private void OnSpace(InputAction.CallbackContext callback)
     {
-        Debug.Log("in");
+        AudioManager.Instance.Play(clip);
     }
 
     void OnDestroy()
     {
-        // ¾×¼ÇÀ» ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
+        // ì•¡ì…˜ì„ ë¹„í™œì„±í™”í•©ë‹ˆë‹¤.
         spaceAction?.Disable();
     }
 }
